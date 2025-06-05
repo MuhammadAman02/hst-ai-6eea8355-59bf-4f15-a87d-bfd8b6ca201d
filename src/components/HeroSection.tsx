@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Paperclip, Send, Sparkles, ArrowRight, Users } from 'lucide-react';
+import { Paperclip, Send, Sparkles } from 'lucide-react';
 
 const HeroSection = () => {
   const [prompt, setPrompt] = useState('');
@@ -36,114 +36,97 @@ const HeroSection = () => {
       {/* Main content */}
       <div className="text-center max-w-6xl mx-auto pt-20">
         {/* Main heading */}
-        <div className="mb-12">
-          <h1 className="text-5xl md:text-8xl font-black mb-8 text-hst-text-primary leading-tight tracking-tight">
+        <div className="mb-8">
+          <h1 className="text-4xl md:text-6xl font-black mb-6 text-hst-text-primary leading-tight tracking-tight">
             Meet Joylo AI
           </h1>
           
-          {/* The statement-making tagline */}
-          <div className="mb-8 space-y-2">
-            <div className="text-3xl md:text-6xl font-bold hst-text-gradient leading-tight">
-              The Assistant.
-            </div>
-            <div className="text-3xl md:text-6xl font-bold hst-text-gradient leading-tight">
-              The Architect.
-            </div>
-            <div className="text-3xl md:text-6xl font-bold hst-text-gradient leading-tight">
-              The Amplifier.
+          {/* The statement-making tagline - more compact */}
+          <div className="mb-6">
+            <div className="text-2xl md:text-4xl font-bold hst-text-gradient leading-tight">
+              The Assistant. The Architect. The Amplifier.
             </div>
           </div>
 
-          <p className="text-xl md:text-2xl text-hst-text-secondary mb-6 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-hst-text-secondary mb-8 max-w-4xl mx-auto leading-relaxed">
             Joylo AI isn't just another app builder. It's your shortcut from idea to launch — without limits, without waiting, without being alone.
           </p>
         </div>
 
-        {/* The Moat - One-Click Architect Feature */}
+        {/* Main AI Prompt Interface - Bigger and Central */}
         <div className="mb-12 max-w-5xl mx-auto">
-          <div className="hst-glass rounded-3xl p-8 md:p-12 border border-hst-accent-blue/20">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="text-left">
-                <h2 className="text-2xl md:text-4xl font-bold text-hst-text-primary mb-4">
-                  While others hand you a sandbox,
-                </h2>
-                <h2 className="text-2xl md:text-4xl font-bold hst-text-gradient mb-6">
-                  we hand you a rocket.
-                </h2>
-                <p className="text-lg text-hst-text-secondary mb-6 leading-relaxed">
-                  Vibe code your app into existence, then bring in a certified Joylo Architect — in one click.
-                </p>
-                <div className="flex items-center space-x-4 p-4 bg-hst-surface rounded-xl border border-hst-border">
-                  <Users className="w-8 h-8 text-hst-accent-blue" />
-                  <div>
-                    <p className="text-hst-text-primary font-semibold">Certified Joylo Architect</p>
-                    <p className="text-hst-text-muted text-sm">One click. Expert execution. Zero friction.</p>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-hst-accent-purple" />
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="hst-card p-6 mb-4">
-                  <div className="text-4xl mb-4">🚀</div>
-                  <h3 className="text-xl font-bold text-hst-text-primary mb-2">Your Code</h3>
-                  <p className="text-hst-text-muted text-sm">Vibe-based creation</p>
-                </div>
-                <div className="text-2xl text-hst-accent-blue mb-4">+</div>
-                <div className="hst-card p-6">
-                  <div className="text-4xl mb-4">🧠</div>
-                  <h3 className="text-xl font-bold text-hst-text-primary mb-2">Their Brains</h3>
-                  <p className="text-hst-text-muted text-sm">Expert architects</p>
-                </div>
-              </div>
-            </div>
+          <div className="text-center mb-6">
+            <h2 className="text-xl md:text-2xl font-semibold text-hst-text-primary mb-2">
+              Start Building Your Vision
+            </h2>
+            <p className="text-hst-text-secondary">
+              Describe your app idea and watch it come to life
+            </p>
           </div>
-        </div>
-
-        {/* AI Prompt Interface */}
-        <div className="mb-12 max-w-4xl mx-auto">
+          
           <form onSubmit={handleSubmit} className="relative">
-            <div className="hst-glass rounded-2xl p-6 border border-hst-accent-purple/20">
-              <div className="flex items-center space-x-4">
+            <div className="hst-glass rounded-3xl p-8 border border-hst-accent-purple/30 shadow-2xl">
+              <div className="flex flex-col space-y-4">
                 <div className="flex-1">
                   <Input
                     value={prompt}
                     onChange={(e) => setPrompt(e.target.value)}
                     placeholder="Ask Joylo AI to create an ecommerce store, a dashboard, or anything you can imagine..."
-                    className="bg-transparent border-0 text-hst-text-primary placeholder:text-hst-text-muted text-base h-12 focus:ring-0 focus:outline-none"
+                    className="bg-transparent border-0 text-hst-text-primary placeholder:text-hst-text-muted text-lg h-16 focus:ring-0 focus:outline-none text-center"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center justify-center space-x-4">
                   <Button
                     type="button"
                     variant="ghost"
                     size="sm"
-                    className="text-hst-text-muted hover:text-hst-text-primary p-2"
+                    className="text-hst-text-muted hover:text-hst-text-primary p-3"
                   >
-                    <Paperclip className="w-4 h-4" />
+                    <Paperclip className="w-5 h-5" />
+                    <span className="ml-2 hidden sm:inline">Attach</span>
                   </Button>
                   <Button
                     type="submit"
-                    className="hst-button-primary px-6 py-2 rounded-lg"
+                    className="hst-button-primary px-8 py-3 rounded-xl text-lg font-semibold"
                   >
-                    <Send className="w-4 h-4 mr-2" />
-                    Build
+                    <Send className="w-5 h-5 mr-2" />
+                    Build with Joylo AI
                   </Button>
                 </div>
               </div>
             </div>
           </form>
-          <p className="text-sm text-hst-text-muted mt-3 text-center">
-            Then get a certified architect with one click to scale, deploy, and polish
-          </p>
+          
+          <div className="mt-6 text-center">
+            <p className="text-sm text-hst-text-muted mb-2">
+              Then get a certified architect with one click to scale, deploy, and polish
+            </p>
+            <div className="flex items-center justify-center space-x-2 text-xs text-hst-text-muted">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              <span>Live AI Assistant Ready</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Compact value proposition */}
+        <div className="mb-8 max-w-4xl mx-auto">
+          <div className="hst-glass rounded-2xl p-6 border border-hst-accent-blue/20">
+            <p className="text-lg text-hst-text-primary mb-2">
+              <span className="hst-text-gradient font-semibold">While others hand you a sandbox, we hand you a rocket.</span>
+            </p>
+            <p className="text-hst-text-secondary">
+              Vibe code your app into existence, then bring in a certified Joylo Architect — in one click.
+            </p>
+          </div>
         </div>
 
         {/* CTA */}
-        <div className="space-y-6">
+        <div className="space-y-4">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="hst-button-primary px-8 py-4 rounded-lg text-lg font-semibold">
+            <Button className="hst-button-primary px-8 py-3 rounded-lg text-base font-semibold">
               Start Building Now
             </Button>
-            <Button variant="outline" className="px-8 py-4 rounded-lg text-lg border-hst-border text-hst-text-primary hover:bg-hst-surface">
+            <Button variant="outline" className="px-8 py-3 rounded-lg text-base border-hst-border text-hst-text-primary hover:bg-hst-surface">
               Meet Our Architects
             </Button>
           </div>
