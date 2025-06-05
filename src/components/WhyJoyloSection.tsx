@@ -12,7 +12,7 @@ const WhyJoyloSection = () => {
     },
     {
       icon: Zap,
-      title: "Zero Friction",
+      title: "Zero Friction", 
       description: "One click away from professional development"
     },
     {
@@ -28,26 +28,20 @@ const WhyJoyloSection = () => {
   ];
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-joylo-darker to-joylo-dark relative overflow-hidden">
-      {/* Subtle background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-joylo-purple/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-joylo-blue/5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="max-w-6xl mx-auto relative z-10">
+    <section className="py-24 px-4 bg-hst-surface">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
+          <h2 className="text-3xl md:text-5xl font-bold text-hst-text-primary mb-8">
             Why Joylo? Because You're Not Alone.
           </h2>
-          <div className="max-w-4xl mx-auto space-y-6 text-base md:text-lg text-gray-400 leading-relaxed">
+          <div className="max-w-4xl mx-auto space-y-6 text-base md:text-lg text-hst-text-secondary leading-relaxed">
             <p>
               This isn't a tool. This is a revolution.
             </p>
             <p>
               Joylo AI doesn't throw you in the deep end. It pairs your momentum with on-demand developer firepower — vetted, certified, and production-savvy.
             </p>
-            <p className="text-joylo-accent font-semibold">
+            <p className="hst-text-gradient font-semibold">
               Every app you build is one click away from expert execution.
             </p>
           </div>
@@ -58,32 +52,28 @@ const WhyJoyloSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={benefit.title}
-              className="glass rounded-xl p-6 text-center hover:bg-white/5 transition-all duration-300"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="hst-card p-6 text-center hover:border-hst-accent-purple/30 transition-all duration-300"
             >
-              <benefit.icon className="w-10 h-10 text-joylo-purple mx-auto mb-4" />
-              <h3 className="text-white font-semibold mb-2 text-sm">{benefit.title}</h3>
-              <p className="text-gray-500 text-xs">{benefit.description}</p>
+              <benefit.icon className="w-10 h-10 text-hst-accent-blue mx-auto mb-4" />
+              <h3 className="text-hst-text-primary font-semibold mb-2 text-sm">{benefit.title}</h3>
+              <p className="text-hst-text-muted text-xs">{benefit.description}</p>
             </div>
           ))}
         </div>
 
         {/* Final CTA */}
         <div className="text-center">
-          <h3 className="text-2xl md:text-4xl font-bold text-white mb-6">
+          <h3 className="text-2xl md:text-4xl font-bold text-hst-text-primary mb-6">
             Ready to build louder, faster, smarter?
           </h3>
-          <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-hst-text-secondary mb-8 max-w-3xl mx-auto">
             Because coding should feel like dancing — and scaling should feel like breathing.
           </p>
           <div className="space-y-4">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-joylo-purple to-joylo-blue hover:from-joylo-blue hover:to-joylo-purple transition-all duration-300 px-8 py-4 text-base font-semibold mr-4"
-            >
+            <Button className="hst-button-primary px-8 py-4 text-base font-semibold mr-4 rounded-lg">
               Join Joylo
             </Button>
-            <p className="text-joylo-accent font-semibold text-base">
+            <p className="hst-text-gradient font-semibold text-base">
               Vibe different. Build with joy.
             </p>
           </div>
