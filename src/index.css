@@ -90,35 +90,47 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 }
 
-/* Custom styles for Joylo AI */
-.gradient-bg {
-  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+/* HST AI specific styles */
+.hst-gradient-bg {
+  background: #0a0a0a;
+  background-image: 
+    radial-gradient(at 40% 20%, rgba(59, 130, 246, 0.05) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(139, 92, 246, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
 }
 
-.glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.hst-glass {
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+.hst-card {
+  background: #111111;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+}
+
+.hst-button-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.hst-button-primary:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  transform: translateY(-1px);
+}
+
+.hst-text-gradient {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #10b981 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.glow-effect {
-  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
-}
-
-.animate-glow {
-  animation: glow 2s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
 }
