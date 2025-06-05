@@ -1,4 +1,4 @@
-import { Rocket, RotateCcw, MessageCircle, Sparkles } from 'lucide-react';
+import { Rocket, RotateCcw, MessageCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const FeaturesSection = () => {
@@ -29,13 +29,13 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-joylo-dark to-gray-900">
+    <section className="py-24 px-4 bg-gradient-to-b from-joylo-dark to-joylo-darker">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Built Different. Built Daring.
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
             Vibe code your app into existence, then bring in a certified Joylo Architect — in one click.
           </p>
         </div>
@@ -44,23 +44,23 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <Card
               key={feature.title}
-              className="glass border-white/10 hover:border-joylo-purple/50 transition-all duration-500 group hover:glow-effect"
+              className="glass border-white/5 hover:border-joylo-purple/30 transition-all duration-500 group"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <CardContent className="p-8">
                 <div className="text-center mb-6">
-                  <div className="text-4xl mb-4">{feature.emoji}</div>
-                  <h3 className="text-2xl font-bold text-white mb-2">
+                  <div className="text-3xl mb-4">{feature.emoji}</div>
+                  <h3 className="text-xl font-bold text-white mb-2">
                     {feature.title}
                   </h3>
                 </div>
                 
-                <p className="text-gray-300 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6 text-sm">
                   {feature.description}
                 </p>
                 
-                <div className="border-t border-white/10 pt-6">
-                  <p className="text-joylo-cyan font-semibold text-center">
+                <div className="border-t border-white/5 pt-6">
+                  <p className="text-joylo-accent font-semibold text-center text-sm">
                     {feature.highlight}
                   </p>
                 </div>
