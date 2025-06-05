@@ -1,14 +1,12 @@
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import WhyJoyloSection from '@/components/WhyJoyloSection';
-import FloatingNav from '@/components/FloatingNav';
 
 const Index = () => {
   console.log('Index page rendered');
 
   return (
-    <div className="min-h-screen bg-joylo-dark">
-      <FloatingNav />
+    <div className="min-h-screen bg-hst-bg">
       <HeroSection />
       <div id="features">
         <FeaturesSection />
