@@ -62,14 +62,21 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				joylo: {
-					dark: '#0a0a0f',
-					darker: '#050508',
-					purple: '#6366f1',
-					blue: '#3b82f6',
-					cyan: '#06b6d4',
-					pink: '#ec4899',
-					accent: '#8b5cf6'
+				// HST AI exact color scheme
+				hst: {
+					bg: '#0a0a0a',
+					surface: '#111111',
+					border: '#1a1a1a',
+					text: {
+						primary: '#ffffff',
+						secondary: '#a1a1aa',
+						muted: '#71717a'
+					},
+					accent: {
+						blue: '#3b82f6',
+						purple: '#8b5cf6',
+						green: '#10b981'
+					}
 				}
 			},
 			borderRadius: {
@@ -94,20 +101,15 @@ export default {
 						height: '0'
 					}
 				},
-				float: {
+				'float': {
 					'0%, 100%': { transform: 'translateY(0px)' },
 					'50%': { transform: 'translateY(-20px)' }
-				},
-				glow: {
-					'0%, 100%': { opacity: '1' },
-					'50%': { opacity: '0.8' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'float': 'float 6s ease-in-out infinite',
-				'glow': 'glow 2s ease-in-out infinite'
+				'float': 'float 6s ease-in-out infinite'
 			}
 		}
 	},
